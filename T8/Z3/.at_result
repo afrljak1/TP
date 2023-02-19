@@ -1,0 +1,72 @@
+{
+    "buildhost_description": {
+        "id": "lab002-c05",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n"
+    },
+    "tools": {
+        "compile": "g++ (GCC) 6.2.0",
+        "compile[debug]": "g++ (GCC) 6.2.0",
+        "debug": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)",
+        "profile[memcheck]": "valgrind-3.8.1",
+        "profile[sgcheck]": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "test_results": {
+        "1": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "compile": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:32:14: warning: variable ‘ucenici’ set but not used [-Wunused-but-set-variable]\n      Ucenik *ucenici;\n              ^~~~~~~\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:71:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from main.cpp:2:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h: In instantiation of ‘constexpr bool __gnu_cxx::__ops::_Iter_comp_iter<_Compare>::operator()(_Iterator1, _Iterator2) [with _Iterator1 = Ucenik*; _Iterator2 = Ucenik*; _Compare = ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>]’:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1844:14:   required from ‘void std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = Ucenik*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1882:25:   required from ‘void std::__final_insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = Ucenik*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1968:31:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = Ucenik*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:4739:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = Ucenik*; _Compare = ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>]’\nmain.cpp:89:3:   required from here\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h:123:18: error: no match for call to ‘(ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>) (Ucenik&, Ucenik&)’\n         { return bool(_M_comp(*__it1, *__it2)); }\n                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h:123:18: note: candidate: bool (*)(const Ucenik*, const Ucenik*) <conversion>\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h:123:18: note:   candidate expects 3 arguments, 3 provided\nmain.cpp:87:43: note: candidate: ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>\n  [](const Ucenik *p_u1, const Ucenik *p_u2) {\n                                           ^\nmain.cpp:87:43: note:   no known conversion for argument 1 from ‘Ucenik’ to ‘const Ucenik*’\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:71:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from main.cpp:2:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h: In instantiation of ‘bool __gnu_cxx::__ops::_Iter_comp_val<_Compare>::operator()(_Iterator, _Value&) [with _Iterator = Ucenik*; _Value = Ucenik; _Compare = ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>]’:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_heap.h:129:48:   required from ‘void std::__push_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare) [with _RandomAccessIterator = Ucenik*; _Distance = long int; _Tp = Ucenik; _Compare = __gnu_cxx::__ops::_Iter_comp_val<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_heap.h:230:23:   required from ‘void std::__adjust_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare) [with _RandomAccessIterator = Ucenik*; _Distance = long int; _Tp = Ucenik; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_heap.h:335:22:   required from ‘void std::__make_heap(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = Ucenik*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1669:23:   required from ‘void std::__heap_select(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = Ucenik*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1930:25:   required from ‘void std::__partial_sort(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = Ucenik*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1945:27:   required from ‘void std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = Ucenik*; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1965:25:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = Ucenik*; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:4739:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = Ucenik*; _Compare = ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>]’\nmain.cpp:89:3:   required from here\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h:144:11: error: no match for call to ‘(ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>) (Ucenik&, Ucenik&)’\n  { return bool(_M_comp(*__it, __val)); }\n           ^~~~~~~~~~~~~~~~~~~~~~~~~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h:144:11: note: candidate: bool (*)(const Ucenik*, const Ucenik*) <conversion>\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h:144:11: note:   candidate expects 3 arguments, 3 provided\nmain.cpp:87:43: note: candidate: ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>\n  [](const Ucenik *p_u1, const Ucenik *p_u2) {\n                                           ^\nmain.cpp:87:43: note:   no known conversion for argument 1 from ‘Ucenik’ to ‘const Ucenik*’\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/algorithm:62:0,\n                 from main.cpp:6:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h: At global scope:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1818:5: warning: ‘void std::__unguarded_linear_insert(_RandomAccessIterator, _Compare) [with _RandomAccessIterator = Ucenik*; _Compare = __gnu_cxx::__ops::_Val_comp_iter<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]’ used but never defined\n     __unguarded_linear_insert(_RandomAccessIterator __last,\n     ^~~~~~~~~~~~~~~~~~~~~~~~~\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:71:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from main.cpp:2:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h:179:5: warning: ‘__gnu_cxx::__ops::_Val_comp_iter<_Compare> __gnu_cxx::__ops::__val_comp_iter(__gnu_cxx::__ops::_Iter_comp_iter<_Compare>) [with _Compare = ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>]’ used but never defined\n     __val_comp_iter(_Iter_comp_iter<_Compare> __comp)\n     ^~~~~~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "warning",
+                            "file": "main.cpp",
+                            "line": "32",
+                            "col": "14",
+                            "message": "variable 'ucenici' set but not used",
+                            "code": "Ucenik *ucenici;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h",
+                            "line": "123",
+                            "col": "18",
+                            "message": "no match for call to '(ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>) (Ucenik&, Ucenik&)'",
+                            "code": "{ return bool(_M_comp(*__it1, *__it2)); }"
+                        },
+                        {
+                            "type": "error",
+                            "file": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h",
+                            "line": "144",
+                            "col": "11",
+                            "message": "no match for call to '(ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>) (Ucenik&, Ucenik&)'",
+                            "code": "{ return bool(_M_comp(*__it, __val)); }"
+                        },
+                        {
+                            "type": "warning",
+                            "file": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h",
+                            "line": "1818",
+                            "col": "5",
+                            "message": "'void std::__unguarded_linear_insert(_RandomAccessIterator, _Compare) [with _RandomAccessIterator = Ucenik*; _Compare = __gnu_cxx::__ops::_Val_comp_iter<ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)> >]' used but never defined",
+                            "code": "__unguarded_linear_insert(_RandomAccessIterator __last,"
+                        },
+                        {
+                            "type": "warning",
+                            "file": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/predefined_ops.h",
+                            "line": "179",
+                            "col": "5",
+                            "message": "'__gnu_cxx::__ops::_Val_comp_iter<_Compare> __gnu_cxx::__ops::__val_comp_iter(__gnu_cxx::__ops::_Iter_comp_iter<_Compare>) [with _Compare = ObradiUcenike(Ucenik*, int)::<lambda(const Ucenik*, const Ucenik*)>]' used but never defined",
+                            "code": "__val_comp_iter(_Iter_comp_iter<_Compare> __comp)"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "time": 1652369271
+}

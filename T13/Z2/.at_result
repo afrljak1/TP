@@ -1,0 +1,232 @@
+{
+    "buildhost_description": {
+        "id": "lab002-c04",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n"
+    },
+    "tools": {
+        "compile": "g++ (GCC) 6.2.0",
+        "compile[debug]": "g++ (GCC) 6.2.0",
+        "debug": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)",
+        "profile[memcheck]": "valgrind-3.8.1",
+        "profile[sgcheck]": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "test_results": {
+        "3803": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Paja Patak 4312 4 7.5\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 7.5.\nNeispravna ocjena\nNeispravna ocjena\nPaja Patak 4312 0 5\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 5.",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "==577== Memcheck, a memory error detector\n==577== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==577== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==577== Command: outputZ6xyMe\n==577==\n====START_TEST_7289====Paja Patak 4312 4 7.5\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 7.5.\nNeispravna ocjena\nNeispravna ocjena\nPaja Patak 4312 0 5\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 5.\n====END_TEST_7289======577==\n==577== HEAP SUMMARY:\n==577==     in use at exit: 72,704 bytes in 1 blocks\n==577==   total heap usage: 5 allocs, 4 frees, 73,076 bytes allocated\n==577==\n==577== LEAK SUMMARY:\n==577==    definitely lost: 0 bytes in 0 blocks\n==577==    indirectly lost: 0 bytes in 0 blocks\n==577==      possibly lost: 0 bytes in 0 blocks\n==577==    still reachable: 72,704 bytes in 1 blocks\n==577==         suppressed: 0 bytes in 0 blocks\n==577== Reachable blocks (those to which a pointer was found) are not shown.\n==577== To see them, rerun with: --leak-check=full --show-reachable=yes\n==577==\n==577== For counts of detected and suppressed errors, rerun with: -v\n==577== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 3,
+                    "output": "==581== exp-sgcheck, a stack and global array overrun detector\n==581== NOTE: This is an Experimental-Class Valgrind Tool\n==581== Copyright (C) 2003-2012, and GNU GPL'd, by OpenWorks Ltd et al.\n==581== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==581== Command: outputZ6xyMe\n==581==\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\n\n: Invalid cuOff = 0x56dfe\n--581-- WARNING: Serious error when reading debug info\n--581-- When reading debug info from /opt/gcc-6.2.0/lib64/libstdc++.so.6.0.22:\n--581-- resolve_variable_types: cuOff does not refer to a known type\n====START_TEST_7289====Paja Patak 4312 4 7.5\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 7.5.\nNeispravna ocjena\nNeispravna ocjena\nPaja Patak 4312 0 5\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 5.\n====END_TEST_7289======581==\n==581== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 32 from 32)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3804": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Dusko Dugousko 1234 4 7.5\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nPaja Patak 4312 4 7.5\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 7.5.",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "==603== Memcheck, a memory error detector\n==603== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==603== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==603== Command: outputqJWAyw\n==603==\n====START_TEST_6812====Dusko Dugousko 1234 4 7.5\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nPaja Patak 4312 4 7.5\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 7.5.\n====END_TEST_6812======603==\n==603== HEAP SUMMARY:\n==603==     in use at exit: 72,704 bytes in 1 blocks\n==603==   total heap usage: 3 allocs, 2 frees, 72,888 bytes allocated\n==603==\n==603== LEAK SUMMARY:\n==603==    definitely lost: 0 bytes in 0 blocks\n==603==    indirectly lost: 0 bytes in 0 blocks\n==603==      possibly lost: 0 bytes in 0 blocks\n==603==    still reachable: 72,704 bytes in 1 blocks\n==603==         suppressed: 0 bytes in 0 blocks\n==603== Reachable blocks (those to which a pointer was found) are not shown.\n==603== To see them, rerun with: --leak-check=full --show-reachable=yes\n==603==\n==603== For counts of detected and suppressed errors, rerun with: -v\n==603== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 2,
+                    "output": "==607== exp-sgcheck, a stack and global array overrun detector\n==607== NOTE: This is an Experimental-Class Valgrind Tool\n==607== Copyright (C) 2003-2012, and GNU GPL'd, by OpenWorks Ltd et al.\n==607== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==607== Command: outputqJWAyw\n==607==\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\n\n: Invalid cuOff = 0x56dfe\n--607-- WARNING: Serious error when reading debug info\n--607-- When reading debug info from /opt/gcc-6.2.0/lib64/libstdc++.so.6.0.22:\n--607-- resolve_variable_types: cuOff does not refer to a known type\n====START_TEST_6812====Dusko Dugousko 1234 4 7.5\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nPaja Patak 4312 4 7.5\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 7.5.\n====END_TEST_6812======607==\n==607== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 32 from 32)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3805": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Originalni student: \n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nKopija student: \n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nOriginalni student nakon izmjene: \n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 8.\nKopija student: \n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "==629== Memcheck, a memory error detector\n==629== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==629== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==629== Command: output8bIxCY\n==629==\n====START_TEST_5795====Originalni student:\n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nKopija student:\n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nOriginalni student nakon izmjene:\n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 8.\nKopija student:\n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\n====END_TEST_5795======629==\n==629== HEAP SUMMARY:\n==629==     in use at exit: 72,704 bytes in 1 blocks\n==629==   total heap usage: 3 allocs, 2 frees, 72,880 bytes allocated\n==629==\n==629== LEAK SUMMARY:\n==629==    definitely lost: 0 bytes in 0 blocks\n==629==    indirectly lost: 0 bytes in 0 blocks\n==629==      possibly lost: 0 bytes in 0 blocks\n==629==    still reachable: 72,704 bytes in 1 blocks\n==629==         suppressed: 0 bytes in 0 blocks\n==629== Reachable blocks (those to which a pointer was found) are not shown.\n==629== To see them, rerun with: --leak-check=full --show-reachable=yes\n==629==\n==629== For counts of detected and suppressed errors, rerun with: -v\n==629== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 2,
+                    "output": "==633== exp-sgcheck, a stack and global array overrun detector\n==633== NOTE: This is an Experimental-Class Valgrind Tool\n==633== Copyright (C) 2003-2012, and GNU GPL'd, by OpenWorks Ltd et al.\n==633== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==633== Command: output8bIxCY\n==633==\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\n\n: Invalid cuOff = 0x56dfe\n--633-- WARNING: Serious error when reading debug info\n--633-- When reading debug info from /opt/gcc-6.2.0/lib64/libstdc++.so.6.0.22:\n--633-- resolve_variable_types: cuOff does not refer to a known type\n====START_TEST_5795====Originalni student:\n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nKopija student:\n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nOriginalni student nakon izmjene:\n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 8.\nKopija student:\n-----------------\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\n====END_TEST_5795======633==\n==633== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 32 from 32)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3806": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Pozvan ispravan destruktor!",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "==655== Memcheck, a memory error detector\n==655== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==655== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==655== Command: outputBFrh0A\n==655==\n====START_TEST_118====Pozvan ispravan destruktor!\n====END_TEST_118======655==\n==655== HEAP SUMMARY:\n==655==     in use at exit: 72,704 bytes in 1 blocks\n==655==   total heap usage: 2 allocs, 1 frees, 72,792 bytes allocated\n==655==\n==655== LEAK SUMMARY:\n==655==    definitely lost: 0 bytes in 0 blocks\n==655==    indirectly lost: 0 bytes in 0 blocks\n==655==      possibly lost: 0 bytes in 0 blocks\n==655==    still reachable: 72,704 bytes in 1 blocks\n==655==         suppressed: 0 bytes in 0 blocks\n==655== Reachable blocks (those to which a pointer was found) are not shown.\n==655== To see them, rerun with: --leak-check=full --show-reachable=yes\n==655==\n==655== For counts of detected and suppressed errors, rerun with: -v\n==655== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 2,
+                    "output": "==659== exp-sgcheck, a stack and global array overrun detector\n==659== NOTE: This is an Experimental-Class Valgrind Tool\n==659== Copyright (C) 2003-2012, and GNU GPL'd, by OpenWorks Ltd et al.\n==659== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==659== Command: outputBFrh0A\n==659==\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\n\n: Invalid cuOff = 0x56dfe\n--659-- WARNING: Serious error when reading debug info\n--659-- When reading debug info from /opt/gcc-6.2.0/lib64/libstdc++.so.6.0.22:\n--659-- resolve_variable_types: cuOff does not refer to a known type\n====START_TEST_118====Pozvan ispravan destruktor!\n====END_TEST_118======659==\n==659== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 32 from 32)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "71234": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Dusko Dugousko 1234 4 7.5\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nNeispravna ocjena\nNeispravna ocjena\nDusko Dugousko 1234 0 5\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 5.",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "==551== Memcheck, a memory error detector\n==551== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==551== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==551== Command: outputTEymC7\n==551==\n====START_TEST_1942====Dusko Dugousko 1234 4 7.5\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nNeispravna ocjena\nNeispravna ocjena\nDusko Dugousko 1234 0 5\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 5.\n====END_TEST_1942======551==\n==551== HEAP SUMMARY:\n==551==     in use at exit: 72,704 bytes in 1 blocks\n==551==   total heap usage: 5 allocs, 4 frees, 73,076 bytes allocated\n==551==\n==551== LEAK SUMMARY:\n==551==    definitely lost: 0 bytes in 0 blocks\n==551==    indirectly lost: 0 bytes in 0 blocks\n==551==      possibly lost: 0 bytes in 0 blocks\n==551==    still reachable: 72,704 bytes in 1 blocks\n==551==         suppressed: 0 bytes in 0 blocks\n==551== Reachable blocks (those to which a pointer was found) are not shown.\n==551== To see them, rerun with: --leak-check=full --show-reachable=yes\n==551==\n==551== For counts of detected and suppressed errors, rerun with: -v\n==551== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 2,
+                    "output": "==555== exp-sgcheck, a stack and global array overrun detector\n==555== NOTE: This is an Experimental-Class Valgrind Tool\n==555== Copyright (C) 2003-2012, and GNU GPL'd, by OpenWorks Ltd et al.\n==555== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==555== Command: outputTEymC7\n==555==\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\n\n: Invalid cuOff = 0x56dfe\n--555-- WARNING: Serious error when reading debug info\n--555-- When reading debug info from /opt/gcc-6.2.0/lib64/libstdc++.so.6.0.22:\n--555-- resolve_variable_types: cuOff does not refer to a known type\n====START_TEST_1942====Dusko Dugousko 1234 4 7.5\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nNeispravna ocjena\nNeispravna ocjena\nDusko Dugousko 1234 0 5\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 5.\n====END_TEST_1942======555==\n==555== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 32 from 32)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        }
+    },
+    "time": 1656415455
+}

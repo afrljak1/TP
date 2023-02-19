@@ -1,0 +1,273 @@
+{
+    "id": 8542,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 4, Zadatak 2",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "compile": [],
+            "options": [
+                "silent",
+                "terminate"
+            ]
+        },
+        {
+            "id": 3251,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT1: testiranje funkcije IzvrniString\n\nstd::string s(\"Ovo je neki tekst...\");\nIzvrniString(s);\nstd::cout << s;",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <string>\n#define vector !zabranjeno!!",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "...tsket iken ej ovO"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3252,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT2: testiranje funkcije IzvrniString\n\nstd::string s(\"...tsket iken ej ovO\");\nIzvrniString(s);\nstd::cout << s;\n",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <string>\n#define vector !zabranjeno!!",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Ovo je neki tekst..."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3253,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT3: testiranje funkcije IzvrniString\n\nstd::string s(\"   123   abc   ...   ttt   ppp   \");\nIzvrniString(s);\nstd::cout << s;\n",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <string>\n#define vector !zabranjeno!!",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "   ppp   ttt   ...   cba   321   "
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3254,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT4: testiranje funkcije IzvrniString\n\nstd::string s(\"   ? . ! 1 _ \");\nIzvrniString(s);\nIzvrniString(s);\nstd::cout << s;",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <string>\n#define vector !zabranjeno!!",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "   ? . ! 1 _ "
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3255,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT5: testiranje funkcije IzvrniString\n\nstd::string s(\"\\n 123 abc\");\nIzvrniString(s);\nIzvrniString(s);\nstd::cout << s;",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <string>\n#define vector !zabranjeno!!",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    " 123 abc"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3294,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT6: testiranje funkcije IzvrniString\n\nstd::string s(\"-1-1-1-\");\nIzvrniString(s);\nIzvrniString(s);\nstd::cout << s;",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <string>\n#define vector !zabranjeno!!",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "-1-1-1-"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3298,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT7: testira main\n\n_main();",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <string>\n#define vector !zabranjeno!!",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "tutorijal\n"
+                },
+                "expect": [
+                    "Unesi string: Izvrnuti string je: lajirotut"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "tutorijal\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "tutorijal\n"
+                }
+            }
+        },
+        {
+            "id": 3299,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT8: testira main\n\n_main();",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <string>\n#define vector !zabranjeno!!",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "teHnikE proGrAmiRanjA\n"
+                },
+                "expect": [
+                    "Unesi string: Izvrnuti string je: AjnaRimArGorp EkinHet"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "teHnikE proGrAmiRanjA\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "teHnikE proGrAmiRanjA\n"
+                }
+            }
+        }
+    ]
+}

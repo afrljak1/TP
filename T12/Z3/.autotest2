@@ -1,0 +1,97 @@
+{
+    "id": 8623,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 12, Zadatak 3",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "compile": [],
+            "options": [
+                "silent",
+                "terminate"
+            ]
+        },
+        {
+            "id": 3761,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT1 Testiranje ispisa pomo\u0107u for petlje\n\n    for(Dani d = Ponedjeljak; d <= Petak; d++)\n    std::cout << d << std::endl;",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Ponedjeljak\nUtorak\nSrijeda\nCetvrtak\nPetak"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3762,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT2 testiranje ispisa \n    for(Dani d = Ponedjeljak; d < Nedjelja ; d++)\n    std::cout << d << std::endl;",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Ponedjeljak\nUtorak\nSrijeda\nCetvrtak\nPetak\nSubota"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

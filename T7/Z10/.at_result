@@ -1,0 +1,111 @@
+{
+    "buildhost_description": {
+        "id": "lab002-c28",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n"
+    },
+    "tools": {
+        "compile": "g++ (GCC) 6.2.0",
+        "compile[debug]": "g++ (GCC) 6.2.0",
+        "debug": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)",
+        "profile[memcheck]": "valgrind-3.8.1",
+        "profile[sgcheck]": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "test_results": {
+        "3492": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘void Test()’:\nmain.cpp:16:64: error: ‘IteriranaFunkcija’ was not declared in this scope\n   std::cout << IteriranaFunkcija([](int x) { return x * x; }, 2)(3) << std::endl;\n                                                                ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "64",
+                            "message": "'IteriranaFunkcija' was not declared in this scope",
+                            "code": "std::cout << IteriranaFunkcija([](int x) { return x * x; }, 2)(3) << std::endl;"
+                        }
+                    ]
+                }
+            }
+        },
+        "3493": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘void Test1()’:\nmain.cpp:16:2: error: ‘function’ is not a member of ‘std’\n  std::function<double(double)> g{IteriranaFunkcija([](int x) { return x + 3; }, 5)};\n  ^~~\nmain.cpp:16:16: error: expected primary-expression before ‘double’\n  std::function<double(double)> g{IteriranaFunkcija([](int x) { return x + 3; }, 5)};\n                ^~~~~~\nmain.cpp:17:18: error: ‘g’ was not declared in this scope\n  std::cout << g(7) << std::endl;\n                  ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "2",
+                            "message": "'function' is not a member of 'std'",
+                            "code": "std::function<double(double)> g{IteriranaFunkcija([](int x) { return x + 3; }, 5)};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "16",
+                            "message": "expected primary-expression before 'double'",
+                            "code": "std::function<double(double)> g{IteriranaFunkcija([](int x) { return x + 3; }, 5)};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "18",
+                            "message": "'g' was not declared in this scope",
+                            "code": "std::cout << g(7) << std::endl;"
+                        }
+                    ]
+                }
+            }
+        },
+        "3494": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘void Test2()’:\nmain.cpp:21:40: error: ‘IteriranaFunkcija’ was not declared in this scope\n   std::cout << IteriranaFunkcija(fun, 1)(5) << std::endl;\n                                        ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "40",
+                            "message": "'IteriranaFunkcija' was not declared in this scope",
+                            "code": "std::cout << IteriranaFunkcija(fun, 1)(5) << std::endl;"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "time": 1651574315
+}

@@ -1,0 +1,345 @@
+{
+    "buildhost_description": {
+        "id": "lab002-c05",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n"
+    },
+    "tools": {
+        "compile": "g++ (GCC) 6.2.0",
+        "compile[debug]": "g++ (GCC) 6.2.0",
+        "debug": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)",
+        "profile[memcheck]": "valgrind-3.8.1",
+        "profile[sgcheck]": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "test_results": {
+        "3757": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:17:3: error: ‘set’ is not a member of ‘std’\n   std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};\n   ^~~\nmain.cpp:17:12: error: expected primary-expression before ‘int’\n   std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};\n            ^~~\nmain.cpp:17:34: error: expected primary-expression before ‘,’ token\n   std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};\n                                  ^\nmain.cpp:17:36: error: ‘s2’ was not declared in this scope\n   std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};\n                                    ^~\nmain.cpp:18:16: error: ‘s1’ was not declared in this scope\n   std::cout << s1 + s2 << std::endl;\n                ^~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "3",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "12",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "34",
+                            "message": "expected primary-expression before ',' token",
+                            "code": "std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "36",
+                            "message": "'s2' was not declared in this scope",
+                            "code": "std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "16",
+                            "message": "'s1' was not declared in this scope",
+                            "code": "std::cout << s1 + s2 << std::endl;"
+                        }
+                    ]
+                }
+            }
+        },
+        "3758": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:17:3: error: ‘set’ is not a member of ‘std’\n   std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};\n   ^~~\nmain.cpp:17:12: error: expected primary-expression before ‘int’\n   std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};\n            ^~~\nmain.cpp:17:34: error: expected primary-expression before ‘,’ token\n   std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};\n                                  ^\nmain.cpp:17:36: error: ‘s2’ was not declared in this scope\n   std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};\n                                    ^~\nmain.cpp:18:16: error: ‘s1’ was not declared in this scope\n   std::cout << s1 * std::set<int>{10, 20, 30} << std::endl;\n                ^~\nmain.cpp:18:21: error: ‘set’ is not a member of ‘std’\n   std::cout << s1 * std::set<int>{10, 20, 30} << std::endl;\n                     ^~~\nmain.cpp:18:30: error: expected primary-expression before ‘int’\n   std::cout << s1 * std::set<int>{10, 20, 30} << std::endl;\n                              ^~~\nmain.cpp:18:47: error: expected primary-expression before ‘<<’ token\n   std::cout << s1 * std::set<int>{10, 20, 30} << std::endl;\n                                               ^~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "3",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "12",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "34",
+                            "message": "expected primary-expression before ',' token",
+                            "code": "std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "36",
+                            "message": "'s2' was not declared in this scope",
+                            "code": "std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "16",
+                            "message": "'s1' was not declared in this scope",
+                            "code": "std::cout << s1 * std::set<int>{10, 20, 30} << std::endl;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "21",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "std::cout << s1 * std::set<int>{10, 20, 30} << std::endl;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "30",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "std::cout << s1 * std::set<int>{10, 20, 30} << std::endl;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "47",
+                            "message": "expected primary-expression before '<<' token",
+                            "code": "std::cout << s1 * std::set<int>{10, 20, 30} << std::endl;"
+                        }
+                    ]
+                }
+            }
+        },
+        "3759": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:17:1: error: ‘set’ is not a member of ‘std’\n std::set<double> s1{3.6, 5.1, 1, 2, 8};\n ^~~\nmain.cpp:17:10: error: expected primary-expression before ‘double’\n std::set<double> s1{3.6, 5.1, 1, 2, 8};\n          ^~~~~~\nmain.cpp:18:3: error: ‘s1’ was not declared in this scope\n   s1 *= std::set<double>{3.6,10,3, 2., 9};\n   ^~\nmain.cpp:18:9: error: ‘set’ is not a member of ‘std’\n   s1 *= std::set<double>{3.6,10,3, 2., 9};\n         ^~~\nmain.cpp:18:18: error: expected primary-expression before ‘double’\n   s1 *= std::set<double>{3.6,10,3, 2., 9};\n                  ^~~~~~\nmain.cpp:20:9: error: ‘set’ is not a member of ‘std’\n   s1 += std::set<double>{3.6,10,3, 2., 9};\n         ^~~\nmain.cpp:20:18: error: expected primary-expression before ‘double’\n   s1 += std::set<double>{3.6,10,3, 2., 9};\n                  ^~~~~~\nmain.cpp:22:3: error: ‘set’ is not a member of ‘std’\n   std::set<std::string> s3{\"dajte\", \"mi\", \"presjek\", \"molim\", \"vas\"};\n   ^~~\nmain.cpp:22:23: error: expected primary-expression before ‘>’ token\n   std::set<std::string> s3{\"dajte\", \"mi\", \"presjek\", \"molim\", \"vas\"};\n                       ^\nmain.cpp:22:25: error: ‘s3’ was not declared in this scope\n   std::set<std::string> s3{\"dajte\", \"mi\", \"presjek\", \"molim\", \"vas\"};\n                         ^~\nmain.cpp:23:9: error: ‘set’ is not a member of ‘std’\n   s3 *= std::set<std::string>{\"izvolite\", \"vaš\", \"presjek\"};\n         ^~~\nmain.cpp:23:29: error: expected primary-expression before ‘>’ token\n   s3 *= std::set<std::string>{\"izvolite\", \"vaš\", \"presjek\"};\n                             ^\nmain.cpp:23:30: error: expected primary-expression before ‘{’ token\n   s3 *= std::set<std::string>{\"izvolite\", \"vaš\", \"presjek\"};\n                              ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "1",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "std::set<double> s1{3.6, 5.1, 1, 2, 8};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "10",
+                            "message": "expected primary-expression before 'double'",
+                            "code": "std::set<double> s1{3.6, 5.1, 1, 2, 8};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "3",
+                            "message": "'s1' was not declared in this scope",
+                            "code": "s1 *= std::set<double>{3.6,10,3, 2., 9};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "9",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "s1 *= std::set<double>{3.6,10,3, 2., 9};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "18",
+                            "message": "expected primary-expression before 'double'",
+                            "code": "s1 *= std::set<double>{3.6,10,3, 2., 9};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "9",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "s1 += std::set<double>{3.6,10,3, 2., 9};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "18",
+                            "message": "expected primary-expression before 'double'",
+                            "code": "s1 += std::set<double>{3.6,10,3, 2., 9};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 10,
+                            "col": "3",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "std::set<std::string> s3{\"dajte\", \"mi\", \"presjek\", \"molim\", \"vas\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 10,
+                            "col": "23",
+                            "message": "expected primary-expression before '>' token",
+                            "code": "std::set<std::string> s3{\"dajte\", \"mi\", \"presjek\", \"molim\", \"vas\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 10,
+                            "col": "25",
+                            "message": "'s3' was not declared in this scope",
+                            "code": "std::set<std::string> s3{\"dajte\", \"mi\", \"presjek\", \"molim\", \"vas\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 11,
+                            "col": "9",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "s3 *= std::set<std::string>{\"izvolite\", \"vaš\", \"presjek\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 11,
+                            "col": "29",
+                            "message": "expected primary-expression before '>' token",
+                            "code": "s3 *= std::set<std::string>{\"izvolite\", \"vaš\", \"presjek\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 11,
+                            "col": "30",
+                            "message": "expected primary-expression before '{' token",
+                            "code": "s3 *= std::set<std::string>{\"izvolite\", \"vaš\", \"presjek\"};"
+                        }
+                    ]
+                }
+            }
+        },
+        "3760": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:17:1: error: ‘set’ is not a member of ‘std’\n std::set<char> s3{'A', 'B'};\n ^~~\nmain.cpp:17:10: error: expected primary-expression before ‘char’\n std::set<char> s3{'A', 'B'};\n          ^~~~\nmain.cpp:18:1: error: ‘set’ is not a member of ‘std’\n std::set<int> s4{1, 2, 3};\n ^~~\nmain.cpp:18:10: error: expected primary-expression before ‘int’\n std::set<int> s4{1, 2, 3};\n          ^~~\nmain.cpp:19:14: error: ‘s3’ was not declared in this scope\n std::cout << s3 % s4 << std::endl;\n              ^~\nmain.cpp:19:19: error: ‘s4’ was not declared in this scope\n std::cout << s3 % s4 << std::endl;\n                   ^~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "1",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "std::set<char> s3{'A', 'B'};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "10",
+                            "message": "expected primary-expression before 'char'",
+                            "code": "std::set<char> s3{'A', 'B'};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "1",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "std::set<int> s4{1, 2, 3};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "10",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "std::set<int> s4{1, 2, 3};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "14",
+                            "message": "'s3' was not declared in this scope",
+                            "code": "std::cout << s3 % s4 << std::endl;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "19",
+                            "message": "'s4' was not declared in this scope",
+                            "code": "std::cout << s3 % s4 << std::endl;"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "time": 1654602349
+}

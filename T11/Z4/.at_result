@@ -1,0 +1,309 @@
+{
+    "buildhost_description": {
+        "id": "lab002-c05",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n"
+    },
+    "tools": {
+        "compile": "g++ (GCC) 6.2.0",
+        "compile[debug]": "g++ (GCC) 6.2.0",
+        "debug": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)",
+        "profile[memcheck]": "valgrind-3.8.1",
+        "profile[sgcheck]": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "test_results": {
+        "3709": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:117:56: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};\n                                                        ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 3 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 3 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 3 provided\nmain.cpp:118:68: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l2{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Krupa\"};\n                                                                    ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 4 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 4 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 4 provided",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "56",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 9,
+                            "col": "68",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l2{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Krupa\"};"
+                        }
+                    ]
+                }
+            }
+        },
+        "3712": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:117:56: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};\n                                                        ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 3 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 3 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 3 provided\nmain.cpp:118:68: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l2{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Krupa\"};\n                                                                    ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 4 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 4 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 4 provided",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "56",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 9,
+                            "col": "68",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l2{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Krupa\"};"
+                        }
+                    ]
+                }
+            }
+        },
+        "3713": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:117:56: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};\n                                                        ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 3 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 3 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 3 provided",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "56",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};"
+                        }
+                    ]
+                }
+            }
+        },
+        "3714": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:117:56: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};\n                                                        ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 3 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 3 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 3 provided",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "56",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};"
+                        }
+                    ]
+                }
+            }
+        },
+        "3718": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:117:56: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};\n                                                        ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 3 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 3 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 3 provided",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "56",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};"
+                        }
+                    ]
+                }
+            }
+        },
+        "3722": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:115:105: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};\n                                                                                                         ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 6 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 6 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 6 provided",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "105",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};"
+                        }
+                    ]
+                }
+            }
+        },
+        "3724": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:115:105: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};\n                                                                                                         ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 6 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 6 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 6 provided",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "105",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};"
+                        }
+                    ]
+                }
+            }
+        },
+        "3726": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:115:105: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};\n                                                                                                         ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 6 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 6 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 6 provided\nmain.cpp:116:103: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l2{\"NK Siroki Brijeg\", \"FK Mladost DK\", \"NK Celik\", \"NK Vitez\", \"NK Metalleghe BSI\", \"FK Olimpic\"};\n                                                                                                       ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 6 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 6 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 6 provided",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "105",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "103",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l2{\"NK Siroki Brijeg\", \"FK Mladost DK\", \"NK Celik\", \"NK Vitez\", \"NK Metalleghe BSI\", \"FK Olimpic\"};"
+                        }
+                    ]
+                }
+            }
+        },
+        "3727": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:115:105: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};\n                                                                                                         ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 6 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 6 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 6 provided",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "105",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};"
+                        }
+                    ]
+                }
+            }
+        },
+        "3743": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘void operator delete(void*)’:\nmain.cpp:140:63: warning: throw will always call terminate() [-Wterminate]\n   if(adresa && !tekuci) throw std::runtime_error(\"Bad delete!\");\n                                                               ^\nmain.cpp: In function ‘int main()’:\nmain.cpp:153:42: error: no matching function for call to ‘Liga::Liga(<brace-enclosed initializer list>)’\n   Liga l1{\"NK Zeljeznicar\", \"FK Sarajevo\"};\n                                          ^\nmain.cpp:80:5: note: candidate: Liga::Liga(const Liga&&)\n     Liga(const Liga &&l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova){\n     ^~~~\nmain.cpp:80:5: note:   candidate expects 1 argument, 2 provided\nmain.cpp:67:5: note: candidate: Liga::Liga(Liga&)\n     Liga(Liga &l):max_br_timova(l.max_br_timova), broj_timova(l.broj_timova), timovi(new Tim*[l.max_br_timova]){\n     ^~~~\nmain.cpp:67:5: note:   candidate expects 1 argument, 2 provided\nmain.cpp:52:14: note: candidate: Liga::Liga(int)\n     explicit Liga(int velicina_lige):broj_timova(0), max_br_timova(velicina_lige), timovi(new Tim*[velicina_lige]){\n              ^~~~\nmain.cpp:52:14: note:   candidate expects 1 argument, 2 provided",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "warning",
+                            "file": "TEST_CODE",
+                            "line": 31,
+                            "col": "63",
+                            "message": "throw will always call terminate()",
+                            "code": "if(adresa && !tekuci) throw std::runtime_error(\"Bad delete!\");"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 44,
+                            "col": "42",
+                            "message": "no matching function for call to 'Liga::Liga(<brace-enclosed initializer list>)'",
+                            "code": "Liga l1{\"NK Zeljeznicar\", \"FK Sarajevo\"};"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "time": 1654182718
+}

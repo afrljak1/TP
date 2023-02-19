@@ -1,0 +1,663 @@
+{
+    "buildhost_description": {
+        "id": "lab002-c04",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n"
+    },
+    "tools": {
+        "compile": "g++ (GCC) 6.2.0",
+        "compile[debug]": "g++ (GCC) 6.2.0",
+        "debug": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)",
+        "profile[memcheck]": "valgrind-3.8.1",
+        "profile[sgcheck]": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "test_results": {
+        "3807": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:95:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n      ^~~~~~~~~~~~~\nmain.cpp:96:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n      ^~~~~~~~~~~~~\nmain.cpp:97:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n      ^~~~~~~~~~~~~\nmain.cpp:98:5: error: no match for ‘operator[]’ (operand types are ‘Fakultet’ and ‘int’)\n   f1[3412].RegistrirajIspit(7); f1[3412].RegistrirajIspit(9);\n     ^\nmain.cpp:98:35: error: no match for ‘operator[]’ (operand types are ‘Fakultet’ and ‘int’)\n   f1[3412].RegistrirajIspit(7); f1[3412].RegistrirajIspit(9);\n                                   ^\nmain.cpp:99:5: error: no match for ‘operator[]’ (operand types are ‘Fakultet’ and ‘int’)\n   f1[3124].RegistrirajIspit(9); f1[3124].RegistrirajIspit(10);\n     ^\nmain.cpp:99:35: error: no match for ‘operator[]’ (operand types are ‘Fakultet’ and ‘int’)\n   f1[3124].RegistrirajIspit(9); f1[3124].RegistrirajIspit(10);\n                                   ^\nmain.cpp:100:5: error: no match for ‘operator[]’ (operand types are ‘Fakultet’ and ‘int’)\n   f1[1243].RegistrirajIspit(8);\n     ^\nmain.cpp:101:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f1.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:102:42: error: no match for ‘operator[]’ (operand types are ‘Fakultet’ and ‘int’)\n   TestirajIzuzetak(std::logic_error, { f1[9876].IspisiPodatke(); });\n                                          ^\nmain.cpp:88:7: note: in definition of macro ‘TestirajIzuzetak’\n   try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n       ^~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 9,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 10,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 11,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 12,
+                            "col": "5",
+                            "message": "no match for 'operator[]' (operand types are 'Fakultet' and 'int')",
+                            "code": "f1[3412].RegistrirajIspit(7); f1[3412].RegistrirajIspit(9);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 12,
+                            "col": "35",
+                            "message": "no match for 'operator[]' (operand types are 'Fakultet' and 'int')",
+                            "code": "f1[3412].RegistrirajIspit(7); f1[3412].RegistrirajIspit(9);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 13,
+                            "col": "5",
+                            "message": "no match for 'operator[]' (operand types are 'Fakultet' and 'int')",
+                            "code": "f1[3124].RegistrirajIspit(9); f1[3124].RegistrirajIspit(10);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 13,
+                            "col": "35",
+                            "message": "no match for 'operator[]' (operand types are 'Fakultet' and 'int')",
+                            "code": "f1[3124].RegistrirajIspit(9); f1[3124].RegistrirajIspit(10);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 14,
+                            "col": "5",
+                            "message": "no match for 'operator[]' (operand types are 'Fakultet' and 'int')",
+                            "code": "f1[1243].RegistrirajIspit(8);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 15,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f1.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 16,
+                            "col": "42",
+                            "message": "no match for 'operator[]' (operand types are 'Fakultet' and 'int')",
+                            "code": "TestirajIzuzetak(std::logic_error, { f1[9876].IspisiPodatke(); });"
+                        }
+                    ]
+                }
+            }
+        },
+        "3808": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:95:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n      ^~~~~~~~~~~~~\nmain.cpp:96:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n      ^~~~~~~~~~~~~\nmain.cpp:97:6: error: ‘class Fakultet’ has no member named ‘ObrisiStudenta’\n   f1.ObrisiStudenta(3412);\n      ^~~~~~~~~~~~~~\nmain.cpp:98:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f1.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:99:43: error: ‘class Fakultet’ has no member named ‘ObrisiStudenta’\n   TestirajIzuzetak(std::logic_error, { f1.ObrisiStudenta(6789); });\n                                           ^\nmain.cpp:88:7: note: in definition of macro ‘TestirajIzuzetak’\n   try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n       ^~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 9,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 10,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 11,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'ObrisiStudenta'",
+                            "code": "f1.ObrisiStudenta(3412);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 12,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f1.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 13,
+                            "col": "43",
+                            "message": "'class Fakultet' has no member named 'ObrisiStudenta'",
+                            "code": "TestirajIzuzetak(std::logic_error, { f1.ObrisiStudenta(6789); });"
+                        }
+                    ]
+                }
+            }
+        },
+        "3809": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:92:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n      ^~~~~~~~~~~~~\nmain.cpp:93:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n      ^~~~~~~~~~~~~\nmain.cpp:94:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n      ^~~~~~~~~~~~~\nmain.cpp:101:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f1.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:105:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f2.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:107:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f2.UpisiStudenta(\"Djuro\", \"Djuric\", 9876);\n      ^~~~~~~~~~~~~\nmain.cpp:111:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f1.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:115:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f2.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:122:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f1.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:126:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f3.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:128:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f3.UpisiStudenta(\"Djuro\", \"Djuric\", 9999);\n      ^~~~~~~~~~~~~\nmain.cpp:132:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f1.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:136:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f3.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 15,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f1.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 19,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f2.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 21,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f2.UpisiStudenta(\"Djuro\", \"Djuric\", 9876);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 25,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f1.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 29,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f2.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 36,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f1.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 40,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f3.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 42,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f3.UpisiStudenta(\"Djuro\", \"Djuric\", 9999);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 46,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f1.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 50,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f3.IspisiSveStudente();"
+                        }
+                    ]
+                }
+            }
+        },
+        "3810": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:92:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n      ^~~~~~~~~~~~~\nmain.cpp:93:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n      ^~~~~~~~~~~~~\nmain.cpp:94:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n      ^~~~~~~~~~~~~\nmain.cpp:97:6: error: ‘const class Fakultet’ has no member named ‘IspisiSveStudente’\n   f4.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:98:5: error: no match for ‘operator[]’ (operand types are ‘const Fakultet’ and ‘int’)\n   f4[3124].IspisiPodatke();\n     ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 11,
+                            "col": "6",
+                            "message": "'const class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f4.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 12,
+                            "col": "5",
+                            "message": "no match for 'operator[]' (operand types are 'const Fakultet' and 'int')",
+                            "code": "f4[3124].IspisiPodatke();"
+                        }
+                    ]
+                }
+            }
+        },
+        "3816": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:93:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n      ^~~~~~~~~~~~~\nmain.cpp:94:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n      ^~~~~~~~~~~~~\nmain.cpp:95:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n      ^~~~~~~~~~~~~\nmain.cpp:98:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f2.UpisiStudenta(\"Meho\", \"Mehic\", 1111);\n      ^~~~~~~~~~~~~\nmain.cpp:99:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f2.UpisiStudenta(\"Ibro\", \"Ibric\", 2222, 2015);\n      ^~~~~~~~~~~~~\nmain.cpp:105:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f1.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:108:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f2.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:110:6: error: ‘class Fakultet’ has no member named ‘ObrisiStudenta’\n   f2.ObrisiStudenta(1111);  //f2 sada ima 1 element\n      ^~~~~~~~~~~~~~\nmain.cpp:113:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f1.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:116:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f2.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:123:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f1.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:126:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f2.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:128:6: error: ‘class Fakultet’ has no member named ‘ObrisiStudenta’\n   f2.ObrisiStudenta(1111); //f2 ima 1 element\n      ^~~~~~~~~~~~~~\nmain.cpp:131:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f1.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:134:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f2.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:138:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f3.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n      ^~~~~~~~~~~~~\nmain.cpp:139:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f3.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n      ^~~~~~~~~~~~~\nmain.cpp:140:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f3.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n      ^~~~~~~~~~~~~\nmain.cpp:143:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f4.UpisiStudenta(\"Meho\", \"Mehic\", 1111);\n      ^~~~~~~~~~~~~\nmain.cpp:144:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f4.UpisiStudenta(\"Ibro\", \"Ibric\", 2222, 2015);\n      ^~~~~~~~~~~~~\nmain.cpp:149:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f4.IspisiSveStudente(); //f4 je prazno\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:151:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f4.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n      ^~~~~~~~~~~~~\nmain.cpp:152:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f4.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n      ^~~~~~~~~~~~~\nmain.cpp:153:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f4.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n      ^~~~~~~~~~~~~\nmain.cpp:155:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f4.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 7,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 9,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 12,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f2.UpisiStudenta(\"Meho\", \"Mehic\", 1111);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 13,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f2.UpisiStudenta(\"Ibro\", \"Ibric\", 2222, 2015);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 19,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f1.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 22,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f2.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 24,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'ObrisiStudenta'",
+                            "code": "f2.ObrisiStudenta(1111);  //f2 sada ima 1 element"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 27,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f1.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 30,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f2.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 37,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f1.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 40,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f2.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 42,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'ObrisiStudenta'",
+                            "code": "f2.ObrisiStudenta(1111); //f2 ima 1 element"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 45,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f1.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 48,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f2.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 52,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f3.UpisiStudenta(\"Meho\", \"Mehic\", 3412);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 53,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f3.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 54,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f3.UpisiStudenta(\"Pero\", \"Peric\", 1243);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 57,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f4.UpisiStudenta(\"Meho\", \"Mehic\", 1111);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 58,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f4.UpisiStudenta(\"Ibro\", \"Ibric\", 2222, 2015);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 63,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f4.IspisiSveStudente(); //f4 je prazno"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 65,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f4.UpisiStudenta(\"Meho\", \"Mehic\", 3412);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 66,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f4.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 67,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f4.UpisiStudenta(\"Pero\", \"Peric\", 1243);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 69,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f4.IspisiSveStudente();"
+                        }
+                    ]
+                }
+            }
+        },
+        "3819": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:108:7: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n     f.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n       ^~~~~~~~~~~~~\nmain.cpp:109:7: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n     f.UpisiStudenta(\"Ibro\", \"Ibric\", 3124);\n       ^~~~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 22,
+                            "col": "7",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f.UpisiStudenta(\"Meho\", \"Mehic\", 3412);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 23,
+                            "col": "7",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f.UpisiStudenta(\"Ibro\", \"Ibric\", 3124);"
+                        }
+                    ]
+                }
+            }
+        },
+        "71234": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:95:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n      ^~~~~~~~~~~~~\nmain.cpp:96:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n      ^~~~~~~~~~~~~\nmain.cpp:97:6: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n      ^~~~~~~~~~~~~\nmain.cpp:98:6: error: ‘class Fakultet’ has no member named ‘IspisiSveStudente’\n   f1.IspisiSveStudente();\n      ^~~~~~~~~~~~~~~~~\nmain.cpp:99:43: error: ‘class Fakultet’ has no member named ‘UpisiStudenta’\n   TestirajIzuzetak(std::logic_error, { f1.UpisiStudenta(\"Drugi\", \"Drugic\", 3412); });\n                                           ^\nmain.cpp:88:7: note: in definition of macro ‘TestirajIzuzetak’\n   try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n       ^~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 9,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 10,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 11,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 12,
+                            "col": "6",
+                            "message": "'class Fakultet' has no member named 'IspisiSveStudente'",
+                            "code": "f1.IspisiSveStudente();"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 13,
+                            "col": "43",
+                            "message": "'class Fakultet' has no member named 'UpisiStudenta'",
+                            "code": "TestirajIzuzetak(std::logic_error, { f1.UpisiStudenta(\"Drugi\", \"Drugic\", 3412); });"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "time": 1655195141
+}

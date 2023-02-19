@@ -1,0 +1,247 @@
+{
+    "buildhost_description": {
+        "id": "lab002-c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n"
+    },
+    "tools": {
+        "compile": "g++ (GCC) 6.2.0",
+        "compile[debug]": "g++ (GCC) 6.2.0",
+        "debug": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)",
+        "profile[memcheck]": "valgrind-3.8.1",
+        "profile[sgcheck]": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "test_results": {
+        "3483": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘void Test()’:\nmain.cpp:16:3: error: ‘set’ is not a member of ‘std’\n   std::set<std::string> s1{\"A\", \"B\", \"C\", \"C\", \"C\"}, s2{\"B\", \"B\", \"D\"};\n   ^~~\nmain.cpp:16:23: error: expected primary-expression before ‘>’ token\n   std::set<std::string> s1{\"A\", \"B\", \"C\", \"C\", \"C\"}, s2{\"B\", \"B\", \"D\"};\n                       ^\nmain.cpp:16:25: error: ‘s1’ was not declared in this scope\n   std::set<std::string> s1{\"A\", \"B\", \"C\", \"C\", \"C\"}, s2{\"B\", \"B\", \"D\"};\n                         ^~\nmain.cpp:16:52: error: expected primary-expression before ‘,’ token\n   std::set<std::string> s1{\"A\", \"B\", \"C\", \"C\", \"C\"}, s2{\"B\", \"B\", \"D\"};\n                                                    ^\nmain.cpp:16:54: error: ‘s2’ was not declared in this scope\n   std::set<std::string> s1{\"A\", \"B\", \"C\", \"C\", \"C\"}, s2{\"B\", \"B\", \"D\"};\n                                                      ^~\nmain.cpp:17:27: error: ‘Unija’ was not declared in this scope\n   for(auto x: Unija(s1, s2)) std::cout << x << \" \";\n                           ^\nmain.cpp:19:29: error: ‘Presjek’ was not declared in this scope\n   for(auto x: Presjek(s1, s2)) std::cout << x << \" \";\n                             ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "3",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "std::set<std::string> s1{\"A\", \"B\", \"C\", \"C\", \"C\"}, s2{\"B\", \"B\", \"D\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "23",
+                            "message": "expected primary-expression before '>' token",
+                            "code": "std::set<std::string> s1{\"A\", \"B\", \"C\", \"C\", \"C\"}, s2{\"B\", \"B\", \"D\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "25",
+                            "message": "'s1' was not declared in this scope",
+                            "code": "std::set<std::string> s1{\"A\", \"B\", \"C\", \"C\", \"C\"}, s2{\"B\", \"B\", \"D\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "52",
+                            "message": "expected primary-expression before ',' token",
+                            "code": "std::set<std::string> s1{\"A\", \"B\", \"C\", \"C\", \"C\"}, s2{\"B\", \"B\", \"D\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "54",
+                            "message": "'s2' was not declared in this scope",
+                            "code": "std::set<std::string> s1{\"A\", \"B\", \"C\", \"C\", \"C\"}, s2{\"B\", \"B\", \"D\"};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "27",
+                            "message": "'Unija' was not declared in this scope",
+                            "code": "for(auto x: Unija(s1, s2)) std::cout << x << \" \";"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "29",
+                            "message": "'Presjek' was not declared in this scope",
+                            "code": "for(auto x: Presjek(s1, s2)) std::cout << x << \" \";"
+                        }
+                    ]
+                }
+            }
+        },
+        "3484": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘void Test1()’:\nmain.cpp:16:3: error: ‘set’ is not a member of ‘std’\n   std::set<int> s1{500, -200, 100, 50, 30}, s2{30, 40, 50, 60, 100};\n   ^~~\nmain.cpp:16:12: error: expected primary-expression before ‘int’\n   std::set<int> s1{500, -200, 100, 50, 30}, s2{30, 40, 50, 60, 100};\n            ^~~\nmain.cpp:16:43: error: expected primary-expression before ‘,’ token\n   std::set<int> s1{500, -200, 100, 50, 30}, s2{30, 40, 50, 60, 100};\n                                           ^\nmain.cpp:16:45: error: ‘s2’ was not declared in this scope\n   std::set<int> s1{500, -200, 100, 50, 30}, s2{30, 40, 50, 60, 100};\n                                             ^~\nmain.cpp:17:21: error: ‘s1’ was not declared in this scope\n   for(auto x: Unija(s1, s2)) std::cout << x << \" \";\n                     ^~\nmain.cpp:17:27: error: ‘Unija’ was not declared in this scope\n   for(auto x: Unija(s1, s2)) std::cout << x << \" \";\n                           ^\nmain.cpp:19:23: error: ‘s1’ was not declared in this scope\n   for(auto x: Presjek(s1, s2)) std::cout << x << \" \";\n                       ^~\nmain.cpp:19:29: error: ‘Presjek’ was not declared in this scope\n   for(auto x: Presjek(s1, s2)) std::cout << x << \" \";\n                             ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "3",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "std::set<int> s1{500, -200, 100, 50, 30}, s2{30, 40, 50, 60, 100};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "12",
+                            "message": "expected primary-expression before 'int'",
+                            "code": "std::set<int> s1{500, -200, 100, 50, 30}, s2{30, 40, 50, 60, 100};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "43",
+                            "message": "expected primary-expression before ',' token",
+                            "code": "std::set<int> s1{500, -200, 100, 50, 30}, s2{30, 40, 50, 60, 100};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 3,
+                            "col": "45",
+                            "message": "'s2' was not declared in this scope",
+                            "code": "std::set<int> s1{500, -200, 100, 50, 30}, s2{30, 40, 50, 60, 100};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "21",
+                            "message": "'s1' was not declared in this scope",
+                            "code": "for(auto x: Unija(s1, s2)) std::cout << x << \" \";"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 4,
+                            "col": "27",
+                            "message": "'Unija' was not declared in this scope",
+                            "code": "for(auto x: Unija(s1, s2)) std::cout << x << \" \";"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "23",
+                            "message": "'s1' was not declared in this scope",
+                            "code": "for(auto x: Presjek(s1, s2)) std::cout << x << \" \";"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "29",
+                            "message": "'Presjek' was not declared in this scope",
+                            "code": "for(auto x: Presjek(s1, s2)) std::cout << x << \" \";"
+                        }
+                    ]
+                }
+            }
+        },
+        "3485": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘void Test2()’:\nmain.cpp:18:3: error: ‘set’ is not a member of ‘std’\n   std::set<std::pair<int, std::string>> s1{{1,\"abc\"}, {2,\"abc\"}, {3,\"bcd\"}}, s2{{4,\"abc\"}, {2,\"abc\"}, {5,\"bcd\"}};\n   ^~~\nmain.cpp:18:38: error: expected primary-expression before ‘>’ token\n   std::set<std::pair<int, std::string>> s1{{1,\"abc\"}, {2,\"abc\"}, {3,\"bcd\"}}, s2{{4,\"abc\"}, {2,\"abc\"}, {5,\"bcd\"}};\n                                      ^~\nmain.cpp:18:41: error: ‘s1’ was not declared in this scope\n   std::set<std::pair<int, std::string>> s1{{1,\"abc\"}, {2,\"abc\"}, {3,\"bcd\"}}, s2{{4,\"abc\"}, {2,\"abc\"}, {5,\"bcd\"}};\n                                         ^~\nmain.cpp:18:76: error: expected primary-expression before ‘,’ token\n   std::set<std::pair<int, std::string>> s1{{1,\"abc\"}, {2,\"abc\"}, {3,\"bcd\"}}, s2{{4,\"abc\"}, {2,\"abc\"}, {5,\"bcd\"}};\n                                                                            ^\nmain.cpp:18:78: error: ‘s2’ was not declared in this scope\n   std::set<std::pair<int, std::string>> s1{{1,\"abc\"}, {2,\"abc\"}, {3,\"bcd\"}}, s2{{4,\"abc\"}, {2,\"abc\"}, {5,\"bcd\"}};\n                                                                              ^~\nmain.cpp:19:27: error: ‘Unija’ was not declared in this scope\n   for(auto x: Unija(s1, s2)) std::cout << \"{\" << x.first << \",\" << x.second << \"}\";\n                           ^\nmain.cpp:21:29: error: ‘Presjek’ was not declared in this scope\n   for(auto x: Presjek(s1, s2)) std::cout << \"{\" << x.first << \",\" << x.second << \"}\";\n                             ^",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "3",
+                            "message": "'set' is not a member of 'std'",
+                            "code": "std::set<std::pair<int, std::string>> s1{{1,\"abc\"}, {2,\"abc\"}, {3,\"bcd\"}}, s2{{4,\"abc\"}, {2,\"abc\"}, {5,\"bcd\"}};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "38",
+                            "message": "expected primary-expression before '>' token",
+                            "code": "std::set<std::pair<int, std::string>> s1{{1,\"abc\"}, {2,\"abc\"}, {3,\"bcd\"}}, s2{{4,\"abc\"}, {2,\"abc\"}, {5,\"bcd\"}};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "41",
+                            "message": "'s1' was not declared in this scope",
+                            "code": "std::set<std::pair<int, std::string>> s1{{1,\"abc\"}, {2,\"abc\"}, {3,\"bcd\"}}, s2{{4,\"abc\"}, {2,\"abc\"}, {5,\"bcd\"}};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "76",
+                            "message": "expected primary-expression before ',' token",
+                            "code": "std::set<std::pair<int, std::string>> s1{{1,\"abc\"}, {2,\"abc\"}, {3,\"bcd\"}}, s2{{4,\"abc\"}, {2,\"abc\"}, {5,\"bcd\"}};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "78",
+                            "message": "'s2' was not declared in this scope",
+                            "code": "std::set<std::pair<int, std::string>> s1{{1,\"abc\"}, {2,\"abc\"}, {3,\"bcd\"}}, s2{{4,\"abc\"}, {2,\"abc\"}, {5,\"bcd\"}};"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "27",
+                            "message": "'Unija' was not declared in this scope",
+                            "code": "for(auto x: Unija(s1, s2)) std::cout << \"{\" << x.first << \",\" << x.second << \"}\";"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "29",
+                            "message": "'Presjek' was not declared in this scope",
+                            "code": "for(auto x: Presjek(s1, s2)) std::cout << \"{\" << x.first << \",\" << x.second << \"}\";"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "time": 1651574124
+}
